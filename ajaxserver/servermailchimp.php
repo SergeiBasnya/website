@@ -126,7 +126,7 @@ if (isset($_POST['submit_message'])) {
         // -- BELOW : EXAMPLE SEND YOU AN EMAIL CONTAINING THE MESSAGE (comment to disable it/ uncomment it to enable it)
         // Set the recipient email address.
         // IMPORTANT - FIXME: Update this to your desired email address (relative to your server domaine).
-        $recipient = "your@email.com";
+        $recipient = "sebastienlafontaine@outlook.fr";
 
         // Set the email subject.
         $subject = "Need support message From ".$name;
