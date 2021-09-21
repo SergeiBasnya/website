@@ -53,7 +53,7 @@ if (isset($_POST['submit_message'])) {
         // -- BELOW : EXAMPLE SEND YOU AN EMAIL CONTAINING THE MESSAGE (comment to disable it/ uncomment it to enable it)
         // Set the recipient email address.
         // IMPORTANT - FIXME: Update this to your desired email address (relative to your server domaine).
-        $recipient = "sebastienlafontaine@outlook.fr";
+        $recipient = "contact@addequa.fr";
         
         // Set the email subject.
         $subject = "Need support message From ".$name;
@@ -75,13 +75,13 @@ if (isset($_POST['submit_message'])) {
         if ( mail($recipient, $subject, $email_content, $email_headers) ) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            $response['success'] = 'Thank You! Your message has been sent';
+            $response['success'] = 'Merci ! Votre message a bien été envoyé.';
             
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            $response['error'] = 'Oops! Something went wrong and we couldn\'t send your message';
-            $content = 'Message delivery error - can not send message'. "\r\n" . $content;
+            $response['error'] = 'Oops! Quelque chose ne va pas avec votre message';
+            $content = 'Erreur message - Ne peut être envoyé'. "\r\n" . $content;
             // Uncomment below to Write message into a file as a backup
             //file_put_contents("message.txt", $content . "\r\n---------\r\n", FILE_APPEND | LOCK_EX);
         }
@@ -115,7 +115,7 @@ if (isset($_POST['submit_email'])) {
     
     // Form validation handled by the server here if required
     if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 50 ) {
-        $response['error']['email'] = "A valid email is required";
+        $response['error']['email'] = "Un Email Valide est requis";
     }
     
     
@@ -129,7 +129,7 @@ if (isset($_POST['submit_email'])) {
         // -- BELOW : EXAMPLE SEND YOU AN EMAIL ABOUT THE NEW USER (comment to disable it/ uncomment it to enable it)
         // Set the recipient email address.
         // IMPORTANT - FIXME: Update this to your desired email address (relative to your server domaine).
-        $recipient = "sebastienlafontaine@outlook.fr";
+        $recipient = "contact@addequa.fr";
         
         // Set the email subject.
         $subject = "New subscription";
@@ -149,13 +149,13 @@ if (isset($_POST['submit_email'])) {
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            $response['success'] = "Thank You! You will be notified.";
+            $response['success'] = "Merci de votre message et à très vite.";
             
         } else {
             // Set a 500 (internal server error) response code.
             //http_response_code(500);
             http_response_code(500);
-            $response['error'] = "Oops! Something went wrong and we couldn't send your message.";
+            $response['error'] = "Oops! Quelque chose ne va pas avec votre message.";
             
         }
         // -- END OF : EXAMPLE YOU AN EMAIL ABOUT THE NEW USER

@@ -27,15 +27,15 @@ if (isset($_POST['submit_message'])) {
 	// Validate data first
     if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 50 ) {
 		http_response_code(403);
-        $response['error']['email'] = "A valid email is required";
+        $response['error']['email'] = "Un E-mail valide est requis";
     }
     if (empty($name) ) {
 		http_response_code(403);
-        $response['error']['name'] = 'Name is required ';
+        $response['error']['name'] = 'Votre nom ici';
     }
     if (empty($message)) {
 		http_response_code(403);
-        $response['error']['message'] = 'Empty message is not allowed';
+        $response['error']['message'] = 'Veuillez nous décrire votre demande ici';
     }
 
 	// Process to emailing if forms are correct
@@ -50,7 +50,7 @@ if (isset($_POST['submit_message'])) {
         
         // Set a 500 (internal server error) response code.
         http_response_code(200);
-        $response['success'] = 'Thank You! Your message has been sent';
+        $response['success'] = 'Merci ! Votre message a bien été envoyé.';
         // Write message into a file as a backup
         file_put_contents("message.txt", $content . "\r\n---------\r\n", FILE_APPEND | LOCK_EX);
                  
@@ -76,7 +76,7 @@ if (isset($_POST['submit_email'])) {
 //    Form validation handles by the server here if required
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 50 ) {
-        $response['error']['email'] = "A valid email is required";
+        $response['error']['email'] = "Un E-mail valide est requis";
     }
 
     if (!isset($response['error']) || $response['error'] === '') {
@@ -87,7 +87,7 @@ if (isset($_POST['submit_email'])) {
         if ($save_text){
             // Set a 200 (okay) response code.
             http_response_code(200);
-            $response['success'] = "Thank You! You will be notified.";
+            $response['success'] = "Merci de votre message et à très vite.";
             // As a backup, save email list to a file
             file_put_contents("email.txt", $email . " \r\n", FILE_APPEND | LOCK_EX);
         }
