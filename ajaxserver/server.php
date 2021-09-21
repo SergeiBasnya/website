@@ -56,7 +56,7 @@ if (isset($_POST['submit_message'])) {
         $recipient = "contact@addequa.fr";
         
         // Set the email subject.
-        $subject = "Need support message From ".$name;
+        $subject = "Contact Site Web".$name;
         
         // Build the email content.
         $email_content = $message."\n \n";
@@ -169,12 +169,12 @@ if (isset($_POST['submit_email'])) {
     $response['form'] = 'submit_email';
     echo json_encode($response);
     
-    /*
-    response will be : {
+    
+    /*response will be : {
         email : 'user@email.com',
         form : 'submit_message',
         success : 'Feedback message if success',
         error : 'A feedback message if an error happened, or a JSON'
-    }
-    */
+    }*/
+    
 }
