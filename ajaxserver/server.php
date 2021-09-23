@@ -27,15 +27,15 @@ if (isset($_POST['submit_message'])) {
     // Validate data first
     if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 50 ) {
         http_response_code(403);
-        $response['error']['email'] = "A valid email is required";
+        $response['error']['email'] = "Une adresse mail valide est requise";
     }
     if (empty($name) ) {
         http_response_code(403);
-        $response['error']['name'] = 'Name is required ';
+        $response['error']['name'] = 'Votre nom ici';
     }
     if (empty($message)) {
         http_response_code(403);
-        $response['error']['message'] = 'Empty message is not allowed';
+        $response['error']['message'] = 'Les messages vides ne sont pas autorisés';
     }
     
     // Process to emailing if forms are correct
