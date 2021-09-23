@@ -15,9 +15,9 @@ Sample CSS overwriting main.css rules
 */
 /* 0 General layout */
 a {
-  color: #0094D8; }
+  color: #000000; }
   a:hover {
-    color: rgba(0, 148, 216, 0.8); }
+    color: rgba(0, 0, 0, 0.8); }
 
 /* 1. Typography */
 /* page header */
@@ -52,7 +52,7 @@ a {
 /* 2. page-header / .page-header */
 /* nav */
 .page-header-alpha .navbar-mainmenu .nav-item a:hover {
-  color: #0094D8; }
+  color: #d3a7bc; }
 
 /* 3 .sections */
 .section-home .home-cover {
