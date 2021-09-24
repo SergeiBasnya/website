@@ -6494,3 +6494,8 @@ p {
 /* ipad and tablet */
 /* ipad and tablet */
 /* phone */
+
+/*Hide recaptcha*/
+.grecaptcha-badge { 
+  visibility: hidden;
+}
