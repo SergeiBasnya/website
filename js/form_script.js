@@ -10,7 +10,7 @@
 	$.fn.initForm = function (options) {
 		var settings = $.extend({
 			type: 'post',
-			serverUrl: 'https//addequa.fr/ajaxserver/server.php',
+			serverUrl: './ajaxserver/server.php',
 			successClean: this.find('.form-success-clean'),
 			successGone: this.find('.form-success-gone'),
 			successInvisible: this.find('.form-success-invisible'),
