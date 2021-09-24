@@ -1142,19 +1142,24 @@
                               </form>-->
 
                               <form name="contact" method="POST" data-netlify="true" action="https://formsubmit.co/contact@addequa.fr">
+                                <div class="row">
+                                  <div class="col-12 col-lg-6">
                                 <p>
-                                  <label>Your Name: <input type="text" name="name" /></label>   
+                                  <label>Votre Nom: <input type="text" name="name" /></label>   
                                 </p>
                                 <p>
-                                  <label>Your Email: <input type="email" name="email" /></label>
+                                  <label>Votre Email: <input type="email" name="email" /></label>
                                 </p>
-                    
-                                <p>
-                                  <label>Message: <textarea name="message"></textarea></label>
-                                </p>
-                                <p>
-                                  <button type="submit">Send</button>
-                                </p>
+                                <div class="form-group no-border">
+                                  <textarea id="mes-text" placeholder="Message ..." name="message" class="form-control form-control-outline thick form-success-clean"
+                                  required></textarea>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                  <button id="submit-message" class="btn btn-outline-white email_b" name="submit_message" type="submit">Envoyer</button>
+                                </div>
+                                </div>
+                                </div>
+                                <input type="hidden" name="_next" value="https://addequa.fr/index.html">
                               </form>
 
                             </div>
