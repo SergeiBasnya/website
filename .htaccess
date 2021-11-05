@@ -3,3 +3,5 @@
     Header set Access-Control-Allow-Origin "addequa.fr"
   </FilesMatch>
 </IfModule>
+
+ErrorDocument 404 /404.html
