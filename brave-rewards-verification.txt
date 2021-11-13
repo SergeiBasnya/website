@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: addequa.fr
+Token: 784a8cf5e38f3d0dffe34e5655cc0f9273cc228903ec6a4af3a0acc10ca077fd
