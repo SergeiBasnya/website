@@ -1035,9 +1035,31 @@
               <!-- form container form-container-signup-->
               <div class="form-container-signup">
 
-                <form class="send_email_form form-container" method="post" action="../ajaxserver/serverfile.php">
+                <div class="form-desc">
+                  <p class="invite anim-4">Laissez-nous vous contacter pour discuter de vos besoins :</p>
+                  <div class="notice">
+                    <span class="asterisk">*</span>Je suis d'accord pour être contacté</div>
+                </div>
+                <form name="contact" method="POST" data-netlify="true" action="https://formsubmit.co/contact@addequa.fr">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                  <p>
+                    <input type="text" name="name" placeholder="Votre Nom" required/> 
+                  </p>
+                  <p>
+                    <input type="email" name="email" placeholder="Votre Email" required/>
+                  </p>
+                  <div class="col-12 col-lg-6">
+                    <button id="submit-message" class="btn btn-outline-white email_b" name="submit_message" type="submit">Envoyer</button>
+                  </div>
+                  </div>
+                  </div>
+                  <input type="hidden" name="_next" value="https://addequa.fr/index.html">
+                </form>
+
+                <!--<form class="send_email_form form-container" method="post" action="../ajaxserver/serverfile.php">
                   <div class="form-desc">
-                    <p class="invite anim-4">Laissez-nous vous contacter pour discuter de vos besoins :</p>
+                    <p class="invite anim-4">test Laissez-nous vous contacter pour discuter de vos besoins :</p>
                     <div class="notice">
                       <span class="asterisk">*</span>Je suis d'accord pour être contacté</div>
                   </div>
@@ -1066,7 +1088,7 @@
                       </div>
                     </div>
                   </div>
-                </form>
+                </form>-->
                 <!-- END send_email_form -->
               </div>
               <!-- End of form container form-container-signup-->
